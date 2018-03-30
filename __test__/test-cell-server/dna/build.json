@@ -1,0 +1,6 @@
+{
+  "serverOrganelle": {
+    "source": "./organelles/server",
+    "killOn": "kill"
+  }
+}

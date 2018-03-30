@@ -1,0 +1,37 @@
+{
+  "name": "organic-stem-cell",
+  "description": "predefined organic cell implementation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browser": "./lib/browser.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "organic-dna-loader": "^1.3.0",
+    "organic-nucleus": "^1.0.1",
+    "organic-plasma": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.2"
+  },
+  "author": "Boris Filipov",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-organic/organic-stem-cell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/node-organic/organic-stem-cell/issues"
+  },
+  "homepage": "https://github.com/node-organic/organic-stem-cell#readme"
+}
