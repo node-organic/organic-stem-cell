@@ -13,7 +13,8 @@ const Cell = require('organic-stem-cell')
 let cellInstance = new Cell({
   dnaSourcePath: path.join(__dirname, 'dna'),
   cellBranch: 'build',
-  cellRoot: __dirname
+  cellRoot: __dirname,
+  defaultKillChemical: 'kill'
 })
 cellInstance.start(CELL_MODE)
 ```
@@ -32,7 +33,8 @@ const dnaChunk = {
 
 let cellInstance = new Cell({
   dna: dnaChunk,
-  cellBranch: 'build'
+  cellBranch: 'build',
+  defaultKillChemical: 'kill'
 })
 cellInstance.start()
 ```
