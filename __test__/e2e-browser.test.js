@@ -12,7 +12,7 @@ test('Cell instance starts async', async () => {
         }
       }
     },
-    cellBranch: 'build'
+    buildBranch: 'build'
   })
   await instance.start()
   expect(instance.plasma.initiated).toBe(true)

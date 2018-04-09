@@ -11,8 +11,8 @@ const path = require('path')
 const Cell = require('organic-stem-cell')
 
 let cellInstance = new Cell({
-  dnaSourcePath: path.join(__dirname, 'dna'),
-  cellBranch: 'build',
+  dnaSourcePaths: [path.join(__dirname, 'dna')],
+  buildBranch: 'build',
   cellRoot: __dirname,
   defaultKillChemical: 'kill'
 })
@@ -33,7 +33,7 @@ const dnaChunk = {
 
 let cellInstance = new Cell({
   dna: dnaChunk,
-  cellBranch: 'build',
+  buildBranch: 'build',
   defaultKillChemical: 'kill'
 })
 cellInstance.start()

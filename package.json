@@ -11,7 +11,7 @@
     "release-major": "npm run test && npm version major && npm publish && git push --tags && git push origin master"
   },
   "dependencies": {
-    "organic-dna-loader": "^1.3.0",
+    "organic-dna-loader": "^1.5.0",
     "organic-nucleus": "^1.0.1",
     "organic-plasma": "^2.1.0"
   },
