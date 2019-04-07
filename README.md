@@ -4,19 +4,42 @@ predefined organic stem cell implementation
 
 ## usage within nodejs
 
-```
-const CELL_MODE = process.env.CELL_MODE
+### using dna folder
 
+Autoloads from dna folder via `organic-dna-loader@1`
+
+```
 const path = require('path')
 const Cell = require('organic-stem-cell')
 
 let cellInstance = new Cell({
-  dnaSourcePaths: [path.join(__dirname, 'dna')],
+  dnaSourcePaths: [path.join(process.cwd(), 'dna')],
   buildBranch: 'build',
-  cellRoot: __dirname,
-  defaultKillChemical: 'kill'
+  cellRoot: process.cwd(),
+  defaultKillChemical: 'kill',
+  supressListenOnProcessEvents: false,
+  cellMode: process.env.CELL_MODE
 })
-cellInstance.start(CELL_MODE)
+cellInstance.start()
+```
+
+### using pre-loaded dna
+
+```
+const Cell = require('organic-stem-cell')
+
+let cellInstance = new Cell({
+  dna: {
+    build: {
+      ...
+    }
+  },
+  buildBranch: 'build',
+  cellRoot: process.cwd(),
+  defaultKillChemical: 'kill',
+  supressListenOnProcessEvents: false
+})
+cellInstance.start()
 ```
 
 ## usage within browsers
@@ -38,3 +61,30 @@ let cellInstance = new Cell({
 })
 cellInstance.start()
 ```
+
+## API
+
+### nodejs
+#### constructor (options)
+#### properties
+##### plasma: Plasma
+##### nucleus: Nucleus
+##### dna: DNA
+##### killChemical, cellMode, cellRoot, buildBranch
+#### methods
+##### async start ()
+##### async stop ()
+##### async loadDNA ()
+##### unhandledRejectionHandler ()
+##### signintHandler ()
+
+### browser
+
+#### constructor (options)
+#### properties
+##### plasma
+##### nucleus
+##### dna
+#### methods
+##### start ()
+##### stop ()
