@@ -2,6 +2,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.3] - 2019-04-24
+
+### fixes
+
+* properly pass unhandled promise rejection error value to default handler
+
+## [3.0.1] - 2019-04-23
+
+### fixes
+
+* properly handle SIGINT and SIGTERM signals
+
+## [3.0.2] - 2019-04-07
+
+### fixes
+
+* npm audit made happy :)
+
+
 ## [3.0.0] - 2019-04-07
 
 **The release contains breaking changes towards v2**
