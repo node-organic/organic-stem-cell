@@ -18,7 +18,9 @@ let cellInstance = new Cell({
   cellRoot: process.cwd(),
   defaultKillChemical: 'kill',
   supressListenOnProcessEvents: false,
-  cellMode: process.env.CELL_MODE
+  cellMode: process.env.CELL_MODE,
+  beforeResolve: function (dna) { return dna },
+  afterResolve: function (dna) { return dna }
 })
 cellInstance.start()
 ```
@@ -71,6 +73,7 @@ cellInstance.start()
 ##### nucleus: Nucleus
 ##### dna: DNA
 ##### killChemical, cellMode, cellRoot, buildBranch
+##### beforeResolve, afterResolve
 #### methods
 ##### async start ()
 ##### async stop ()

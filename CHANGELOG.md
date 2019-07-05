@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.1.0] - 2019-07-05
+
+### additions to node version
+
+* adds support to use `beforeResolve` and `afterResolve` hooks of `organic-dna-loader` v1.7
+* adds support for referenced templates via `organic-dna-loader` v1.7 / `organic-dna-resolve` v1.1
+
 ## [3.0.3] - 2019-04-24
 
 ### fixes
