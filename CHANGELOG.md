@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.1.1] - 2019-08-08
+
+### fixes in node version
+
+* upgrades to `organic-dna-loader` v1.7.1 (fixes resolve hooks)
+* removes dead code
+
 ## [3.1.0] - 2019-07-05
 
 ### additions to node version
