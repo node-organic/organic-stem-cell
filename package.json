@@ -1,7 +1,7 @@
 {
   "name": "organic-stem-cell",
   "description": "predefined organic cell implementation",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "main": "./lib/node.js",
   "browser": "./lib/browser.js",
   "scripts": {
