@@ -2,40 +2,57 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.1] - 2019-08-08
+## [major.minor.patch] - YYYY-MM-DD
+
+### Changed
+### Added
+### Removed
+
+## 3.2.0 - 2019-09-10
+
+### Changed
+
+* upgrade to `organic-dna-loader@1.8.0`
+* upgrade to `organic-nucleus@3.0.0`
+
+### Added
+
+* support for custom `dnaLoader` implementation when running under `node`.
+
+## 3.1.1 - 2019-08-08
 
 ### fixes in node version
 
 * upgrades to `organic-dna-loader` v1.7.1 (fixes resolve hooks)
 * removes dead code
 
-## [3.1.0] - 2019-07-05
+## 3.1.0 - 2019-07-05
 
 ### additions to node version
 
 * adds support to use `beforeResolve` and `afterResolve` hooks of `organic-dna-loader` v1.7
 * adds support for referenced templates via `organic-dna-loader` v1.7 / `organic-dna-resolve` v1.1
 
-## [3.0.3] - 2019-04-24
+## 3.0.3 - 2019-04-24
 
 ### fixes
 
 * properly pass unhandled promise rejection error value to default handler
 
-## [3.0.1] - 2019-04-23
+## 3.0.1 - 2019-04-23
 
 ### fixes
 
 * properly handle SIGINT and SIGTERM signals
 
-## [3.0.2] - 2019-04-07
+## 3.0.2 - 2019-04-07
 
 ### fixes
 
 * npm audit made happy :)
 
 
-## [3.0.0] - 2019-04-07
+## 3.0.0 - 2019-04-07
 
 **The release contains breaking changes towards v2**
 
@@ -53,7 +70,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `cell.signintHandler`
 
 
-## [2.0.4] - 2019-03-08
+## 2.0.4 - 2019-03-08
 
 ### Changed
 

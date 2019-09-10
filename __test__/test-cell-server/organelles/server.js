@@ -13,6 +13,7 @@ module.exports = class ServerOrganelle {
 
     server.listen(port, hostname, () => {
       this.listening = true
+      plasma.serverListening = true
     })
 
     plasma.on(dna.killOn, (c, callback) => {
