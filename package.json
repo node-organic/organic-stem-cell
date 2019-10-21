@@ -14,7 +14,7 @@
   "dependencies": {
     "organic-dna-loader": "^1.8.0",
     "organic-nucleus": "^3.0.0",
-    "organic-plasma": "^2.1.0"
+    "organic-plasma": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

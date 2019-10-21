@@ -8,6 +8,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 ### Removed
 
+## 4.0.0 - 2019-10-21
+
+**breaking changes introduced due upgrade of organic-plasma to 3.0**
+
+### Changed
+
+* upgrade to `organic-plasma@3.0.0` - drops `plasma.emitAndCollect` and adds support for async/await with `plasma.emit`
+
 ## 3.2.0 - 2019-09-10
 
 ### Changed
