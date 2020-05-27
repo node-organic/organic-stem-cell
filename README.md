@@ -1,6 +1,12 @@
-# organic-stem-cell
+# organic-stem-cell v4
 
-predefined organic stem cell implementation
+Predefined organic stem cell implementation
+
+Uses under-the-hood:
+
+* `organic-plasma@4.0.0`
+* `organic-nucleus@3.0.0`
+* `organic-dna-loader@1.8.0`
 
 ## usage within nodejs
 
@@ -14,13 +20,6 @@ const Cell = require('organic-stem-cell')
 
 let cellInstance = new Cell({
   dnaSourcePaths: [path.join(process.cwd(), 'dna')],
-  buildBranch: 'build',
-  cellRoot: process.cwd(),
-  defaultKillChemical: 'kill',
-  supressListenOnProcessEvents: false,
-  cellMode: process.env.CELL_MODE,
-  beforeResolve: function (dna) { return dna },
-  afterResolve: function (dna) { return dna }
 })
 cellInstance.start()
 ```
@@ -36,10 +35,6 @@ let cellInstance = new Cell({
       ...
     }
   },
-  buildBranch: 'build',
-  cellRoot: process.cwd(),
-  defaultKillChemical: 'kill',
-  supressListenOnProcessEvents: false
 })
 cellInstance.start()
 ```
@@ -58,8 +53,6 @@ const dnaChunk = {
 
 let cellInstance = new Cell({
   dna: dnaChunk,
-  buildBranch: 'build',
-  defaultKillChemical: 'kill'
 })
 cellInstance.start()
 ```
@@ -68,26 +61,59 @@ cellInstance.start()
 
 ### nodejs
 #### constructor (options)
+##### options & defaults
+
+```
+{
+  dnaSourcePaths: undefined, // Array[String]
+  dna: undefined, // Object
+  buildBranch: 'build',
+  cellRoot: process.cwd(),
+  defaultKillChemical: 'kill',
+  supressListenOnProcessEvents: false,
+  cellMode: process.env.CELL_MODE,
+  beforeResolve: function (dna) { return dna },
+  afterResolve: function (dna) { return dna },
+  plasma: new Plasma(),
+  nucleus: new Nucleus(),
+  dnaLoader: require('organic-dna-loader')
+}
+```
+
 #### properties
-##### plasma: Plasma
-##### nucleus: Nucleus
-##### dna: DNA
-##### killChemical, cellMode, cellRoot, buildBranch
-##### beforeResolve, afterResolve
+
+##### cell.plasma
+##### cell.nucleus
+##### cell.dna
+
 #### methods
+
 ##### async start ()
 ##### async stop ()
 ##### async loadDNA ()
-##### unhandledRejectionHandler ()
-##### signintHandler ()
 
 ### browser
 
 #### constructor (options)
+##### options & defaults
+
+```
+{
+  buildBranch: 'build',
+  cellRoot: process.cwd(),
+  defaultKillChemical: 'kill',
+  cellMode: process.env.CELL_MODE,
+  plasma: new Plasma(),
+  nucleus: new Nucleus()
+}
+```
+
 #### properties
-##### plasma
-##### nucleus
-##### dna
+
+##### cell.plasma
+##### cell.nucleus
+##### cell.dna
+
 #### methods
 ##### start ()
 ##### stop ()

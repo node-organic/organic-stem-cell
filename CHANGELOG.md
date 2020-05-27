@@ -2,11 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [major.minor.patch] - YYYY-MM-DD
+## [5.0.0] - 2020-05-27
 
 ### Changed
-### Added
-### Removed
+
+* upgrade to `organic-plasma@4.0.0`
+* adds support to inject other versions of `plasma` or `nucleus` along with options or to fallback to bundled defaults.
 
 ## 4.0.0 - 2019-10-21
 
@@ -83,3 +84,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - update to latest `organic-dna-loader@1.6.0`
+
+## [major.minor.patch] - YYYY-MM-DD
+
+### Changed
+### Added
+### Removed
